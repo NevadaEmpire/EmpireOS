@@ -23,22 +23,6 @@ function createCell(text) {
     return td;
 
 }
-function $(selector) {
-    return document.querySelector(selector);
-}
-
-function formatDuration(seconds) {
-    seconds = Number(seconds || 0);
-    const minutes = Math.floor(seconds / 60);
-    const remaining = seconds % 60;
-    return `${minutes}:${String(remaining).padStart(2, "0")}`;
-}
-
-function createCell(value) {
-    const td = document.createElement("td");
-    td.textContent = value ?? "";
-    return td;
-}
 
 export async function refreshCallHistory() {
 
