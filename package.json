@@ -1,0 +1,19 @@
+{
+  "name": "empireconnection",
+  "version": "0.1.4",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/client.js --bundle --minify --outfile=public/client.js",
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "helmet": "^8.1.0",
+    "sip.js": "^0.21.2"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.9"
+  }
+}

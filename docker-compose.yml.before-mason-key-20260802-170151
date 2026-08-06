@@ -1,0 +1,24 @@
+services:
+  app:
+    build: .
+    container_name: travel-empire-dialer
+    network_mode: host
+    restart: unless-stopped
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /tmp:size=32m,mode=1777
+    volumes:
+      - /var/lib/travel-empire-dialer:/data
+      - /etc/travel-empire:/run/travel-empire:ro
+    env_file:
+      - .env.dialer
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+      PUBLIC_HOST: dialer.travelempire.org
+      DATA_DIR: /data
+      SECRETS_DIR: /run/travel-empire

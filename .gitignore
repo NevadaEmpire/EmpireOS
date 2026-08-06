@@ -1,0 +1,5 @@
+.env.dialer
+.release-backups/
+*.before-*
+*.BROKEN*
+*.save
