@@ -420,12 +420,7 @@ app.get("/api/calls/history", requireAuth, (request, response) => {
 
 });
 
-    response.json({ calls });
-
-});
-
-  response.json({ calls });
-});
+   
 app.get("/api/campaigns", requireAuth, (request, response) => {
   const extension = String(request.session.user.extension || "");
   const campaigns = readJson(campaignsPath, []).map((campaign) => {
