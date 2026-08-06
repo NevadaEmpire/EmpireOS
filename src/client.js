@@ -1834,4 +1834,19 @@ if (sidebar && sidebarToggle) {
   sidebar.addEventListener("focusout", () => window.setTimeout(() => { if (!sidebar.contains(document.activeElement)) setSidebarOpen(false); }, 0));
 }
 
-api("/api/me").then(({ user }) => showApp(user)).catch(() => { loginView.hidden = false; });
+api("/api/me")
+  .then(({ user }) => {
+    loginView.style.display = "none";
+    loginView.hidden = true;
+
+    appView.style.display = "";
+    appView.hidden = false;
+
+    showApp(user);
+  })
+  .catch((error) => {
+    console.error(error);
+
+    loginView.style.display = "";
+    loginView.hidden = false;
+  });
