@@ -409,11 +409,16 @@ app.post("/api/logout", requireAuth, (request, response) => {
 
 app.get("/api/me", requireAuth, (request, response) => response.json({ user: request.session.user }));
 app.get("/api/calls/history", requireAuth, (request, response) => {
-  const calls = loadCallHistory(
-  activityPath,
-  leadsPath,
-  request.session.user.username
-);
+
+    const calls = loadCallHistory(
+        activityPath,
+        leadsPath,
+        request.session.user.username
+    );
+
+    response.json({ calls });
+
+});
 
   response.json({ calls });
 });

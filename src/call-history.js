@@ -79,7 +79,15 @@ export function loadCallHistory(activityPath, leadsPath, username) {
           direction:
             call.direction || "outbound",
 
-          duration: "",
+          duration: call.startedAt
+  ? Math.max(
+      0,
+      Math.round(
+        (new Date(event.at).getTime() -
+          new Date(call.startedAt).getTime()) / 1000
+      )
+    )
+  : 0,
 
           firstName:
             lead.firstName || "",
@@ -122,8 +130,10 @@ export function loadCallHistory(activityPath, leadsPath, username) {
           zip:
             lead.zip || "",
 
-          campaignId:
-            lead.campaignId || "",
+          campaignName:
+    lead.campaignName ||
+    lead.source ||
+    "",
 
           source:
             lead.source || "",
