@@ -665,10 +665,31 @@ async function loadLayout() {
 }
 
 function applySectionOrder() {
+
   const panel = $("#advisor-panel");
-  if (!panel || !state.layout) return;
-  const nodes = new Map([...panel.querySelectorAll(":scope > [data-layout-section]")].map((node) => [node.dataset.layoutSection, node]));
-  for (const section of state.layout.sectionOrder) if (nodes.has(section)) panel.append(nodes.get(section));
+  if (!panel) return;
+
+  const order = [
+    "phone",
+    "customer",
+    "campaign",
+    "dispositions",
+    "performance",
+    "call-history",
+    "notes-mason"
+  ];
+
+  const nodes = new Map(
+    [...panel.querySelectorAll(":scope > [data-layout-section]")]
+      .map(node => [node.dataset.layoutSection, node])
+  );
+
+  order.forEach((section) => {
+    if (nodes.has(section)) {
+      panel.appendChild(nodes.get(section));
+    }
+  });
+
 }
 
 function moveArrayItem(items, index, direction) {
@@ -693,7 +714,7 @@ function renderLayoutEditor() {
     select.replaceChildren(...state.customerFieldOptions.map((field) => new Option(field.label, field.id)));
     select.value = state.layout.customerFields[index];
   });
-  const sectionLabels = { phone: "Phone and incoming queue", customer: "Customer information", dispositions: "Dispositions", campaign: "Packages and script", performance: "Performance", "notes-mason": "Notes and Mason" };
+  const sectionLabels = { phone: "Phone and incoming queue", customer: "Customer information", dispositions: "Dispositions", campaign: "Packages and script", performance: "Performance" "call-history": "Call History", "notes-mason": "Notes and Mason"};
   const sectionList = $("#layout-section-list"); sectionList.replaceChildren();
   state.layout.sectionOrder.forEach((section, index) => {
     const row = document.createElement("div"); row.className = "layout-editor-row";
