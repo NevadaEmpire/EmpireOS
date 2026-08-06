@@ -714,8 +714,15 @@ function renderLayoutEditor() {
     select.replaceChildren(...state.customerFieldOptions.map((field) => new Option(field.label, field.id)));
     select.value = state.layout.customerFields[index];
   });
-  const sectionLabels = { phone: "Phone and incoming queue", customer: "Customer information", dispositions: "Dispositions", campaign: "Packages and script", performance: "Performance" "call-history": "Call History", "notes-mason": "Notes and Mason"};
-  const sectionList = $("#layout-section-list"); sectionList.replaceChildren();
+const sectionLabels = {
+  phone: "Phone and incoming queue",
+  customer: "Customer information",
+  dispositions: "Dispositions",
+  campaign: "Packages and script",
+  performance: "Performance",
+  "call-history": "Call History",
+  "notes-mason": "Notes and Mason"
+};
   state.layout.sectionOrder.forEach((section, index) => {
     const row = document.createElement("div"); row.className = "layout-editor-row";
     const label = document.createElement("strong"); label.textContent = sectionLabels[section] || section;
