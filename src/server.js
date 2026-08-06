@@ -420,6 +420,10 @@ app.get("/api/calls/history", requireAuth, (request, response) => {
 
 });
 
+    response.json({ calls });
+
+});
+
   response.json({ calls });
 });
 app.get("/api/campaigns", requireAuth, (request, response) => {
