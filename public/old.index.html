@@ -118,127 +118,127 @@
               <div><span id="power-terminal-batch">NO ACTIVE BATCH</span><i id="power-terminal-light"></i></div>
             </div>
             <div class="power-terminal-columns" aria-hidden="true"><span>LINE</span><span>NUMBER</span><span>CUSTOMER</span><span>STATUS</span><span>ELAPSED</span><span>DETAIL</span></div>
-            <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#070b14">
-  <title>EmpireConnection | Travel Empire</title>
-  <link rel="icon" type="image/png" href="/crown-favicon.png">
-  <link rel="stylesheet" href="/styles.css?v=empireconnection-workspace-v11">
-  <link rel="stylesheet" href="/dispo-fix.css?v=1785880315">
-</head>
-<body>
-  <header class="topbar">
-    <a id="workspace-brand" class="brand" href="#workspace" aria-label="EmpireConnections" data-view="advisor"><img id="workspace-brand-logo" src="/empire-connections-logo.png" alt="EmpireConnections"></a>
-    <nav class="top-tabs" aria-label="EmpireConnection sections">
-      <a class="advisor-only active" href="#workspace" hidden>Workspace</a><a class="advisor-only" href="#campaign-workspace" hidden>Campaigns</a><a class="advisor-only" href="#performance" hidden>Dashboards</a><a class="advisor-only" href="#performance" hidden>KPIs</a><a class="advisor-only" href="#performance" hidden>Reports</a><a class="admin-only" href="#lead-command-center" hidden>Leads</a><a class="admin-only" href="#admin-panel" hidden>Admin</a>
-    </nav>
-    <div class="top-actions"><span class="system-ready"><i></i> SYSTEM READY</span><div class="account"><span id="identity"></span><button id="view-switch" class="text-button dual-view-admin" type="button" hidden>Advisor View</button><a class="text-button" href="https://crm.travelempire.org/wp-admin/admin.php?page=tecrm-dashboard">EmpireInsights</a><a class="text-button advisor-only new-sale-link" href="https://crm.travelempire.org/wp-admin/admin.php?page=tecrm-new-sale" hidden>+ New Sale</a><button id="logout-button" class="text-button">Sign Off</button></div></div>
-  </header>
-
-  <main class="shell">
-    <p id="error-message" class="alert" hidden></p>
-
-    <section id="login-view" class="sso-card" hidden>
-      <span class="eyebrow">EMPIREINSIGHTS SINGLE SIGN-ON</span><h1>Continue through EmpireInsights</h1>
-      <p>EmpireConnection does not use a separate advisor login. Sign in to EmpireInsights once, then open the calling workspace.</p>
-      <a class="button primary" href="https://crm.travelempire.org/wp-admin/admin.php?page=tecrm-dashboard">Open EmpireInsights</a>
-    </section>
-
-    <section id="app-view" class="app-layout" hidden>
-      <aside class="sidebar">
-        <button id="sidebar-toggle" class="sidebar-toggle" type="button" aria-expanded="false" aria-label="Expand EmpireConnections menu" title="Expand EmpireConnections menu"><span aria-hidden="true">☰</span><span class="nav-label">Menu</span></button>
-        <div id="sidebar-title" class="sidebar-title nav-label">ADVISOR WORKSPACE</div>
-        <nav>
-          <a class="nav-item advisor-only active" href="#workspace" hidden><span class="nav-icon">◆</span><span class="nav-label">Live Workspace</span></a>
-          <a class="nav-item advisor-only" href="#customer-card" hidden><span class="nav-icon">◉</span><span class="nav-label">Customer</span></a>
-          <a class="nav-item advisor-only" href="#campaign-workspace" hidden><span class="nav-icon">▤</span><span class="nav-label">Packages &amp; Script</span></a>
-          <a class="nav-item advisor-only" href="#disposition-center" hidden><span class="nav-icon">✓</span><span class="nav-label">Dispositions</span></a>
-          <a class="nav-item advisor-only" href="#performance" hidden><span class="nav-icon">⌁</span><span class="nav-label">My Performance</span></a><a class="nav-item advisor-only" href="#call-history" hidden>
-    <span class="nav-icon">☎</span>
-    <span class="nav-label">Call History</span>
-</a>
-          <a class="nav-item advisor-only" href="#mason-ai" hidden><span class="nav-icon">◇</span><span class="nav-label">Mason — Broadcast AI</span></a>
-          <div class="nav-section advisor-only nav-label" hidden>COMMUNICATIONS</div>
-          <a class="nav-item advisor-only" href="#notifications" hidden><span class="nav-icon">✉</span><span class="nav-label">Email</span><b class="counter">0</b></a>
-          <a class="nav-item advisor-only" href="#notifications" hidden><span class="nav-icon">◈</span><span class="nav-label">Voicemail</span><b class="counter">0</b></a>
-          <div class="nav-section admin-only nav-label">MANAGEMENT</div>
-          <a class="nav-item admin-only" href="#admin-panel"><span class="nav-icon">◎</span><span class="nav-label">Advisor Management</span></a>
-          <a class="nav-item admin-only" href="#admin-panel"><span class="nav-icon">⇄</span><span class="nav-label">Incoming Calls</span></a>
-          <a class="nav-item admin-only" href="#lead-command-center"><span class="nav-icon">▦</span><span class="nav-label">Lead Command Center</span></a>
-        </nav>
-      </aside>
-
-      <div id="workspace" class="content">
-        <div class="content-heading">
-          <div><span id="workspace-eyebrow" class="eyebrow">TRAVEL EMPIRE OPERATIONS</span><h1 id="workspace-title">Advisor Command Center</h1><p id="workspace-description">One workspace for conversations, packages, scripts, and outcomes.</p></div>
-          <div id="advisor-work-controls" class="work-controls advisor-only" hidden><label>Advisor status<select id="advisor-status"><option>Ready</option><option>Break</option><option>Lunch</option><option>Administrative work</option><option>Meeting</option></select></label><span class="live-badge">● LIVE</span></div>
-        </div>
-
-        <form id="advisor-global-search" class="advisor-global-search advisor-only" hidden>
-          <label for="advisor-global-search-input">SEARCH EMPIREINSIGHTS</label>
-          <div><input id="advisor-global-search-input" type="search" autocomplete="off" placeholder="Search name, phone, email, booking #, transaction ID, auth code, address, or city…"><button class="primary" type="submit">Open Record Search</button></div>
-        </form>
-
-        <div id="advisor-panel" hidden>
-          <section class="panel campaign-membership-panel campaign-top-panel" data-layout-section="campaign-access">  <div class="campaign-access-heading">    <span class="eyebrow">CAMPAIGN ACCESS</span>    <h2>Join an active campaign</h2>  </div>  <div class="campaign-access-row">    <div class="campaign-access-control custom-campaign-controls">      <label for="advisor-custom-campaign-select">Advisor Custom Campaigns</label>      <select id="advisor-custom-campaign-select" aria-label="Advisor custom campaign">        <option value="">No custom campaigns assigned</option>      </select>      <span id="custom-campaign-membership-status" class="status">SELECT CUSTOM CAMPAIGN</span>      <div class="campaign-action-row">        <button id="join-custom-campaign" class="primary" type="button">Join</button>        <button id="leave-custom-campaign" class="ghost danger compact" type="button">Leave</button>      </div>    </div>    <div class="campaign-access-control campaign-membership-controls">      <label for="advisor-campaign-select">Empire Campaigns</label>      <select id="advisor-campaign-select" aria-label="Active campaign"></select>      <span id="campaign-membership-status" class="status">CHECKING…</span>      <div class="campaign-action-row">        <button id="power-dial-button" class="primary campaign-power-dial" type="button" aria-pressed="false">Start Power Dial</button>        <button id="join-campaign" class="primary" type="button">Join</button>        <button id="leave-campaign" class="ghost danger compact" type="button">Leave</button>      </div>    </div>    <div class="campaign-access-control incoming-campaign-controls">      <div>        <span class="eyebrow">INCOMING CALLS</span>        <strong id="queue-status">Checking…</strong>        <small>Join only when ready to accept live incoming calls.</small>      </div>      <div class="campaign-action-row">        <button id="join-queue" class="primary" type="button">Join</button>        <button id="leave-queue" class="ghost danger compact" type="button">Leave</button>      </div>    </div>  </div></section>
-
-          <section class="workspace-row" data-layout-section="phone">
-            <div class="panel phone-panel">
-              <div class="panel-heading"><div><span class="eyebrow">EMPIRECONNECTION</span><h2>Advisor Phone</h2><p>Live browser calling, keypad, timer, and transfer controls.</p></div><span id="phone-status" class="status" data-tone="offline">Offline</span></div>
-              <div class="desk-phone" aria-label="EmpireConnection advisor phone">
-                <div class="phone-screen">
-                  <div class="phone-screen-top"><img src="/empire-connections-logo.png" alt="EmpireConnections"><span id="call-timer">00:00</span></div>
-                  <strong id="phone-screen-status">READY</strong>
-                  <label for="destination">Customer number</label>
-                  <input id="destination" inputmode="tel" autocomplete="off" placeholder="Enter customer number">
-                </div>
-                <div class="phone-deck">
-                  <div class="dial-pad" aria-label="Dial pad">
-                    <button type="button" data-digit="1"><b>1</b></button><button type="button" data-digit="2"><b>2</b><small>ABC</small></button><button type="button" data-digit="3"><b>3</b><small>DEF</small></button>
-                    <button type="button" data-digit="4"><b>4</b><small>GHI</small></button><button type="button" data-digit="5"><b>5</b><small>JKL</small></button><button type="button" data-digit="6"><b>6</b><small>MNO</small></button>
-                    <button type="button" data-digit="7"><b>7</b><small>PQRS</small></button><button type="button" data-digit="8"><b>8</b><small>TUV</small></button><button type="button" data-digit="9"><b>9</b><small>WXYZ</small></button>
-                    <button type="button" data-digit="*"><b>*</b></button><button type="button" data-digit="0"><b>0</b><small>+</small></button><button type="button" data-digit="#"><b>#</b><small>SEND</small></button>
-                  </div>
-                  <div class="phone-action-stack">
-                    <button id="to-button" class="phone-to" type="button">TO</button>
-                    <div id="to-panel" class="to-panel" hidden><strong id="to-panel-title">Available TOs</strong><div id="to-list"></div><small id="to-panel-note">Only advisors currently available for a live TO are shown.</small></div>
-                    <button id="call-button" class="phone-call" type="button" disabled aria-label="Place call">☎ <span>CALL</span></button>
-                    <button id="hangup-button" class="phone-end" type="button" disabled aria-label="End call">☎ <span>END</span></button>
-                    <button id="transfer-button" class="phone-transfer" type="button" disabled aria-label="Transfer call">⇄ <span>TRANSFER</span></button>
-                  </div>
-                </div>
-              </div>
-              <div id="incoming-call" hidden><strong id="incoming-number">Incoming caller</strong></div><audio id="remote-audio" autoplay playsinline controls></audio>
+            <div id="power-terminal-lines" class="power-terminal-lines">
+              <div class="power-terminal-line waiting"><b>01</b><code>—</code><span>Awaiting Dialer</span><strong>WAITING</strong><time>00:00</time><small>Ready</small></div>
+              <div class="power-terminal-line waiting"><b>02</b><code>—</code><span>Awaiting Dialer</span><strong>WAITING</strong><time>00:00</time><small>Ready</small></div>
+              <div class="power-terminal-line waiting"><b>03</b><code>—</code><span>Awaiting Dialer</span><strong>WAITING</strong><time>00:00</time><small>Ready</small></div>
+              <div class="power-terminal-line waiting"><b>04</b><code>—</code><span>Awaiting Dialer</span><strong>WAITING</strong><time>00:00</time><small>Ready</small></div>
+              <div class="power-terminal-line waiting"><b>05</b><code>—</code><span>Awaiting Dialer</span><strong>WAITING</strong><time>00:00</time><small>Ready</small></div>
+              <div class="power-terminal-line waiting"><b>06</b><code>—</code><span>Awaiting Dialer</span><strong>WAITING</strong><time>00:00</time><small>Ready</small></div>
+              <div class="power-terminal-line waiting"><b>07</b><code>—</code><span>Awaiting Dialer</span><strong>WAITING</strong><time>00:00</time><small>Ready</small></div>
+              <div class="power-terminal-line waiting"><b>08</b><code>—</code><span>Awaiting Dialer</span><strong>WAITING</strong><time>00:00</time><small>Ready</small></div>
+              <div class="power-terminal-line waiting"><b>09</b><code>—</code><span>Awaiting Dialer</span><strong>WAITING</strong><time>00:00</time><small>Ready</small></div>
+              <div class="power-terminal-line waiting"><b>10</b><code>—</code><span>Awaiting Dialer</span><strong>WAITING</strong><time>00:00</time><small>Ready</small></div>
             </div>
-            <div class="phone-side-column">
-            <section id="customer-card" class="panel customer-panel" data-layout-section="customer">
-              <div class="section-title"><div><span class="eyebrow">CURRENT CONTACT</span><h2>Customer information</h2></div><div class="lead-controls"><span id="record-state" class="record-state">WAITING FOR CAMPAIGN LEAD</span><button id="next-lead-button" class="secondary" type="button">Next Lead</button></div></div>
-              <div id="customer-grid" class="customer-grid"><div><small>Name</small><strong>—</strong></div><div><small>Phone</small><strong>—</strong></div><div><small>Email</small><strong>—</strong></div><div><small>City / State</small><strong>—</strong></div><div><small>Campaign</small><strong>Unassigned</strong></div><div><small>Prior destination</small><strong>—</strong></div></div>
             </section>
-            <details id="advisor-messages" class="advisor-messages panel" aria-live="polite">
-              <summary class="message-heading"><div><span class="eyebrow">TEAM COMMUNICATION</span><h2>Advisor Messages</h2></div><div class="message-summary-action"><span id="message-waiting" class="message-waiting" hidden>MESSAGE WAITING <b id="message-unread-total">0</b></span><span class="message-open-label">Open messages</span></div></summary>
-              <div class="message-workspace">
-                <div id="message-people" class="message-people" aria-label="Advisor conversations"></div>
-                <div class="message-conversation">
-                  <div id="message-conversation-title" class="message-conversation-title">Select an advisor</div>
-                  <div id="message-thread" class="message-thread"><p>Select an advisor to start a private conversation.</p></div>
-                  <form id="message-form" class="message-compose">
-                    <input id="message-input" maxlength="1200" autocomplete="off" placeholder="Type a message…" disabled>
-                    <button class="primary" type="submit" disabled>Send</button>
-                  </form>
-                </div>
-              </div>
-            </details>
-            <section id="power-dial-terminal" class="power-dial-terminal" aria-live="polite">
-            <div class="power-terminal-head">
-              <div><strong>10-Call Dial Preview</strong></div>
-              <div><span id="power-terminal-batch">NO ACTIVE BATCH</span><i id="power-terminal-light"></i></div>
             </div>
-            <div class="power-terminal-columns" aria-hidden="true"><span>LINE</span><span>NUMBER</span><span>CUSTOMER</span><span>STATUS</span><span>ELAPSED</span><span>DETAIL</span></div>
-                        <div class="panel notes-panel">
+          </section>
+
+          <section id="disposition-center" class="panel disposition-panel" data-layout-section="dispositions">
+            <div class="section-title"><div><span class="eyebrow">CALL OUTCOME</span><h2>Choose a disposition</h2></div><span class="required-note">Required before next contact</span></div>
+            <div id="disposition-rail" class="disposition-rail"></div>
+            <div id="callback-detail" class="detail-choice" hidden><strong>Callback time</strong><input id="callback-at" type="datetime-local"><small>The callback stays assigned to this advisor.</small></div>
+            <div id="language-detail" class="detail-choice" hidden><strong>Language barrier</strong><label><input type="radio" name="language" value="Spanish"> Spanish</label><label><input type="radio" name="language" value="Unknown"> Unknown</label></div>
+            <div id="email-detail" class="detail-choice" hidden><strong>Email template</strong><select><option>Choose an EmpireInsights template</option><option>Travel Empire package overview</option><option>Requested information</option><option>Payment link follow-up</option></select><button class="secondary">Send from advisor email</button></div>
+          </section>
+
+          <section id="campaign-workspace" class="campaign-grid" data-layout-section="campaign">
+            <div class="panel package-panel">
+              <div class="section-title"><div><span class="eyebrow">PACKAGE REFERENCE</span><h2>Vacation options</h2></div><div class="segmented"><button class="active" data-package-tab="zoom">Zoom</button><button data-package-tab="person">In-person</button></div></div>
+              <div id="package-zoom" class="package-content"><article><small>ZOOM COLLECTION</small><h3>Empire Escape™</h3><p>One four-day/three-night stay plus one three-day/two-night stay for up to four travelers.</p></article><article><small>HOST DESTINATIONS</small><h3>20 destinations</h3><p>Las Vegas, Orlando, Miami, Cancun, Cabo, Puerto Vallarta, Chicago, San Antonio, Atlantic City, Palm Springs, Branson, Fort Lauderdale, Atlanta, New Orleans, Myrtle Beach, Gatlinburg, Pigeon Forge, Albuquerque, Sedona, and Colorado Springs.</p></article><article><small>DINING BENEFIT</small><h3>$200 Dining Credit</h3><p>Present only the benefits assigned to the active campaign and confirm the approved redemption requirements.</p></article><article><small>ADDITIONAL COLLECTIONS</small><h3>First Class Escape™ &amp; Grand Horizons™</h3><p>Airfare and worldwide condominium benefits vary by the customer’s assigned campaign.</p></article><article><small>CRUISE COLLECTION</small><h3>Empire Voyages™</h3><p>Standard and Flex cruise options are available only when included in the assigned package.</p></article></div>
+              <div id="package-person" class="package-content" hidden><article><small>IN-PERSON COLLECTION</small><h3>Empire Escape™ Presentation Vacation</h3><p>Four-day/three-night destination stay in Las Vegas or Orlando with the applicable Time 2 Travel preview.</p></article><article><small>LAS VEGAS BENEFITS</small><h3>Dining and entertainment</h3><p>Pampas dinner for two, four promotional show tickets, and a $250 dining card when assigned to the campaign.</p></article><article><small>CRUISE</small><h3>Five- or six-day cruise</h3><p>Customer remains responsible for applicable taxes, port fees, gratuities, and disclosed booking charges.</p></article><article><small>CONDOMINIUM</small><h3>Eight-day/seven-night stay</h3><p>Worldwide condominium collection for the approved occupancy and booking window.</p></article><article><small>AIRFARE COLLECTION</small><h3>Three-day/two-night stay plus airfare</h3><p>Round-trip airfare for two with the assigned hotel benefit, subject to the approved campaign terms.</p></article><article><small>QUALIFICATION</small><h3>Confirm before presenting</h3><p>Verify citizenship, age, income, and marital or cohabitation requirements before completing the sale.</p></article></div>
+            </div>
+            <div class="panel script-panel">
+              <div class="section-title"><div><span class="eyebrow">CAMPAIGN SCRIPT</span><h2>Conversation guide</h2></div><select aria-label="Campaign script"><option>Default advisor script</option></select></div>
+              <div id="script-copy" class="script-copy"><p><strong>Opening:</strong> Hi <span data-merge-field="first_name">{{first_name}}</span>, this is <span data-merge-field="advisor_name">{{advisor_name}}</span> with Travel Empire.</p><p><strong>Discovery:</strong> <span data-merge-field="first_name">{{first_name}}</span>, where do you enjoy traveling, who travels with you, and which benefit would create the most value?</p><p><strong>Qualification:</strong> Confirm citizenship, age, household income, and marital or cohabitation status before presenting the qualifying package.</p><p class="manager-note">Scripts support {{first_name}}, {{last_name}}, {{full_name}}, and {{advisor_name}} merge fields.</p></div>
+            </div>
+          </section>
+
+          <div class="performance-block" data-layout-section="performance">
+          <section id="performance" class="performance-grid">
+            <div class="metric"><small>TIME WORKED</small><strong id="worked-value">00:00:00</strong></div><div class="metric"><small>DIALS</small><strong id="dials-value">0</strong></div><div class="metric"><small>CONNECTIONS</small><strong id="connections-value">0</strong></div><div class="metric"><small>TALK TIME</small><strong id="talk-value">00:00</strong></div><div class="metric"><small>BREAK TIME</small><strong>00:00</strong></div><div class="metric commission"><select id="commission-period" aria-label="Commission period"><option value="today">TODAY'S COMMISSION</option><option value="week">WEEKLY COMMISSION</option><option value="all">ALL-TIME COMMISSION</option></select><strong id="commission-value">$0.00</strong></div>
+          </section>
+          </div>
+
+          <section class="analytics-panel panel">
+            <div class="section-title"><div><span class="eyebrow">LIVE PERFORMANCE</span><h2>Call center reporting</h2><p>Filterable by date, campaign, advisor, team, interaction, ring group, and disposition.</p></div><div class="report-filters"><select aria-label="Reporting date"><option>Today</option><option>This week</option><option>This month</option></select><select aria-label="Campaign"><option>All campaigns</option></select></div></div>
+            <div class="chart-grid"><article class="chart-card"><div><strong>Call volume</strong><b>0 total calls</b></div><svg viewBox="0 0 600 190" role="img" aria-label="Call volume chart"><g class="grid-lines"><path d="M45 25H580M45 65H580M45 105H580M45 145H580"/></g><path class="chart-line cyan" d="M45 145 C110 135 130 72 195 102 S300 150 355 75 S470 55 580 112"/><path class="chart-line blue" d="M45 152 C120 150 150 112 220 128 S350 142 410 102 S510 115 580 130"/></svg><small>Total · Handled · Voicemail · Abandoned</small></article><article class="chart-card"><div><strong>Talk time & after-call work</strong><b>00:00 avg talk</b></div><svg viewBox="0 0 600 190" role="img" aria-label="Talk time chart"><defs><linearGradient id="talk-fill" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#2bc3b1" stop-opacity=".5"/><stop offset="1" stop-color="#2bc3b1" stop-opacity="0"/></linearGradient></defs><g class="grid-lines"><path d="M45 25H580M45 65H580M45 105H580M45 145H580"/></g><path class="chart-area" d="M45 150 C110 142 125 55 190 70 S300 160 355 105 S480 45 580 122 L580 165H45Z"/><path class="chart-line teal" d="M45 150 C110 142 125 55 190 70 S300 160 355 105 S480 45 580 122"/></svg><small>Talk time · Hold time · After-call work</small></article></div>
+          </section>
+          </div>
+<section id="call-history" class="panel advisor-only">
+
+<div class="section-title">
+    <div>
+        <span class="eyebrow">CALL HISTORY</span>
+        <h2>Conversation History</h2>
+        <p>Recover previous conversations instantly.</p>
+    </div>
+</div>
+
+<div class="call-history-toolbar">
+
+<input
+id="call-history-search"
+type="search"
+placeholder="Search name, phone, campaign..."
+autocomplete="off"
+>
+
+<select id="call-history-filter">
+
+<option value="today">Today</option>
+<option value="week">This Week</option>
+<option value="month">This Month</option>
+<option value="all">All</option>
+
+</select>
+
+</div>
+
+<table class="call-history-table">
+
+<thead>
+
+<tr>
+
+<th width="110">Time</th>
+
+<th>Name</th>
+
+<th width="150">Phone</th>
+
+<th width="160">Campaign</th>
+
+<th width="130">Disposition</th>
+
+<th width="110">Duration</th>
+
+<th width="150"></th>
+
+</tr>
+
+</thead>
+
+<tbody id="call-history-body">
+
+<tr>
+
+<td colspan="7" style="text-align:center;padding:30px;">
+
+No conversations found.
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+          <section class="notes-mason-grid" data-layout-section="notes-mason">
+            <div class="panel notes-panel">
               <div class="section-title"><div><span class="eyebrow">AUTOSAVE NOTES</span><h2>Call notes</h2><p>Notes are saved to the active lead while you type.</p></div><span id="notes-save-status" class="status">NO ACTIVE LEAD</span></div>
               <textarea id="call-notes" rows="7" placeholder="Load a lead to begin notes…" disabled></textarea>
             </div>
