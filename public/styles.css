@@ -1582,3 +1582,170 @@ section[data-layout-section="campaign-access"] .campaign-power-dial {
     border-radius:6px;
     cursor:pointer;
 }
+
+/* ==========================================================
+   EMPIRE OS v12 THEME
+========================================================== */
+
+:root{
+
+    --empire-bg:#070B14;
+    --empire-bg2:#0E1625;
+    --empire-panel:#142033;
+
+    --empire-gold:#D4AF37;
+    --empire-gold2:#F2C94C;
+
+    --empire-blue:#2B74B8;
+
+    --empire-green:#1E8A57;
+
+    --empire-red:#8F1F2C;
+
+    --empire-text:#F7F9FC;
+
+    --empire-muted:#9AA9BB;
+
+    --empire-border:#243247;
+
+    --empire-radius:18px;
+
+}
+
+/* ---------- APP ---------- */
+
+body{
+
+    background:var(--empire-bg)!important;
+
+    color:var(--empire-text)!important;
+
+}
+
+/* ---------- PANELS ---------- */
+
+.panel{
+
+    background:linear-gradient(
+        180deg,
+        #162235,
+        #101826
+    )!important;
+
+    border:1px solid var(--empire-border)!important;
+
+    border-radius:18px!important;
+
+    box-shadow:
+        0 14px 35px rgba(0,0,0,.35)!important;
+
+    padding:24px!important;
+
+    margin-bottom:22px!important;
+
+}
+
+/* ---------- HEADINGS ---------- */
+
+.panel h2{
+
+    color:white!important;
+
+    font-weight:700!important;
+
+}
+
+.eyebrow{
+
+    color:var(--empire-gold)!important;
+
+    letter-spacing:3px!important;
+
+    font-size:11px!important;
+
+    text-transform:uppercase!important;
+
+}
+
+/* ---------- BUTTONS ---------- */
+
+button{
+
+    border-radius:12px!important;
+
+    transition:.18s!important;
+
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+
+}
+/* ==========================================================
+   EMPIRE PANELS
+========================================================== */
+
+.panel{
+
+    background:
+        linear-gradient(
+            180deg,
+            #162235 0%,
+            #101826 100%
+        ) !important;
+
+    border:1px solid #2B3B52 !important;
+
+    border-radius:18px !important;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.40);
+
+    padding:24px !important;
+
+    margin-bottom:24px !important;
+
+}
+
+.panel:hover{
+
+    border-color:#D4AF37 !important;
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.45);
+
+}
+/* ==========================================================
+   SECTION HEADERS
+========================================================== */
+
+.section-title{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    margin-bottom:20px;
+
+}
+
+.section-title h2{
+
+    color:#FFFFFF !important;
+
+    font-size:30px !important;
+
+    font-weight:700 !important;
+
+    margin:6px 0 0;
+
+}
+
+.section-title p{
+
+    color:#9FB0C4;
+
+}
