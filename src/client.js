@@ -1121,7 +1121,7 @@ async function chooseDisposition(disposition, button) {
   $("#notes-save-status").textContent = "NO ACTIVE LEAD";
   $("#record-state").textContent = "READY FOR NEXT LEAD";
   renderCustomer(); renderScript();
-  ();
+  
 
   if ((state.dialMode || "preview") === "preview" && state.dialModeRunning) {
     if ($("#last-call-checkbox")?.checked) {
