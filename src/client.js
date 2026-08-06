@@ -1,4 +1,5 @@
 import { Inviter, Registerer, SessionState, UserAgent } from "sip.js";
+import { refreshCallHistory } from "./modules/call-history-ui.js";
 
 const state = {
   user: null,
@@ -412,6 +413,7 @@ async function showApp(user) {
   }
   await refreshQueue();
   await refreshPerformance();
+  await refreshCallHistory();
   if (adminView) {
     await Promise.all([refreshUsers(), refreshMappingCount(), refreshLeadAdmin(), refreshSavedLeadFilters(), refreshLeadCommandCenter(), refreshAdvisorWaitTimes()]);
     clearInterval(state.advisorWaitTimer); clearInterval(state.advisorWaitRefreshTimer);
@@ -1119,7 +1121,7 @@ async function chooseDisposition(disposition, button) {
   $("#notes-save-status").textContent = "NO ACTIVE LEAD";
   $("#record-state").textContent = "READY FOR NEXT LEAD";
   renderCustomer(); renderScript();
-  refreshPerformance();
+  ();
 
   if ((state.dialMode || "preview") === "preview" && state.dialModeRunning) {
     if ($("#last-call-checkbox")?.checked) {
