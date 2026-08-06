@@ -24,22 +24,6 @@ function createCell(text) {
 
 }
 
-export async function refreshCallHistory() {
-
-    const tbody = $("#call-history-body");
-
-    if (!tbody) return;
-
-    tbody.innerHTML = `
-        <tr>
-            <td colspan="7" style="text-align:center;padding:20px;">
-                Loading Call History...
-            </td>
-        </tr>
-    `;
-
-    try {
-
         const response = await fetch("/api/calls/history", {
             credentials: "same-origin"
         });
